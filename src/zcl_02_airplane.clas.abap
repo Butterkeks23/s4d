@@ -1,5 +1,6 @@
 CLASS zcl_02_airplane DEFINITION
   PUBLIC
+    ABSTRACT
   CREATE PUBLIC .
 
   PUBLIC SECTION.
@@ -21,8 +22,6 @@ CLASS zcl_02_airplane DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-
-
 CLASS zcl_02_airplane IMPLEMENTATION.
   METHOD constructor.
 
@@ -30,8 +29,6 @@ CLASS zcl_02_airplane IMPLEMENTATION.
     me->airplane_type = airplane_type.
     airplane_number += 1.
   ENDMETHOD.
-
-
 
   METHOD to_string.
     string = |Name: { name }, AirplaneType: { airplane_type }|.
